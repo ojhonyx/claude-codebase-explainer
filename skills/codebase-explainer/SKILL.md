@@ -125,6 +125,4 @@ Explains the architecture, stack, structure, and important flows of any codebase
 3. <step>
 ```
 
-## Examples
 
-See `examples.md` for a complete annotated example.

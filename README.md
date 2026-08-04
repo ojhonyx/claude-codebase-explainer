@@ -1,10 +1,6 @@
 # Claude Codebase Explainer
 
-A focused Claude Code skill that explains the architecture, stack, and important flows of any codebase in seconds.
-
-![Demo](images/demo.gif)
-
-Replace the file above with your own demo GIF before submitting to the Claude plugin store.
+A Claude Code skill that explains the architecture, stack, and important flows of any codebase in seconds.
 
 ## Quickstart
 
@@ -54,15 +50,6 @@ Plugin page: https://claude.com/plugins/Explainer
 
 This skill is written for **Claude Code** using the `.claude/skills/` format. It is not automatically compatible with other assistants or editors. To port it to another platform you would need to rewrite the manifest and instructions to match that platform's own skill/plugin format.
 
-## Examples
-
-See the `examples/` directory for sample outputs:
-
-- `examples/nextjs.md`
-- `examples/fastify.md`
-- `examples/laravel.md`
-- `examples/react.md`
-
 ## Repository structure
 
 ```
@@ -71,14 +58,7 @@ claude-codebase-explainer/
 │   └── plugin.json
 ├── skills/
 │   └── codebase-explainer/
-│       ├── SKILL.md
-│       └── examples.md
-├── examples/
-│   ├── nextjs.md
-│   ├── fastify.md
-│   ├── laravel.md
-│   └── react.md
-├── images/
+│       └── SKILL.md
 ├── README.md
 └── LICENSE
 ```
