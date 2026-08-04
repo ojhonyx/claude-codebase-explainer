@@ -50,9 +50,9 @@ Plugin manifest: `.claude-plugin/plugin.json`
 
 Plugin page: https://claude.com/plugins/Explainer
 
-## Future compatibility
+## Other agents
 
-The skill is built for **Claude Code** first. The same structure can be adapted for other agents and editors such as Antigravity, Codex App, Codex CLI, Cursor, Factory Droid, Gemini CLI, GitHub Copilot CLI, Kimi Code, OpenCode, and Pi.
+This skill is written for **Claude Code** using the `.claude/skills/` format. It is not automatically compatible with other assistants or editors. To port it to another platform you would need to rewrite the manifest and instructions to match that platform's own skill/plugin format.
 
 ## Examples
 
