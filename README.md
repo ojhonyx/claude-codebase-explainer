@@ -1,27 +1,33 @@
 # Claude Codebase Explainer
 
-A Claude Code skill that instantly explains any codebase.
+A focused Claude Code skill that explains the architecture, stack, and important flows of any codebase in seconds.
 
-## Usage
+![Demo](images/demo.gif)
 
-In any project where this skill is installed, type:
+Replace the file above with your own demo GIF before submitting to the Claude plugin store.
+
+## Quickstart
+
+Install the skill in any project and type:
 
 ```
 /explain
 ```
 
-Claude will inspect the repository and produce a structured overview.
+Claude will inspect the repository and respond with a structured overview.
 
-## Features
+## What it does
 
-- Automatically detects the stack
-- Finds the application entry point
-- Maps important folders
-- Identifies authentication, database, API, payment, queue, and storage providers
-- Lists important files
-- Generates a concise developer guide
+- Detects the technology stack by reading manifests and configuration files.
+- Finds the application entry point.
+- Maps the most important folders.
+- Identifies authentication, database, payment, queue, and storage providers.
+- Lists API routes and important files.
+- Generates a concise developer guide.
 
 ## Output
+
+The skill always returns the same sections in the same order:
 
 ```markdown
 # Project Overview
@@ -32,35 +38,50 @@ Claude will inspect the repository and produce a structured overview.
 # Developer Guide
 ```
 
-See `.claude/skills/codebase-explainer/` for the skill definition and `examples/` for sample outputs.
+## Plugin registration
 
-## Compatibility
+For Claude Code:
 
-The skill is built for **Claude Code** first, but the same structure can be adapted to other agents and editors:
-
-- Claude Code
-- Antigravity
-- Codex App
-- Codex CLI
-- Cursor
-- Factory Droid
-- Gemini CLI
-- GitHub Copilot CLI
-- Kimi Code
-- OpenCode
-- Pi
-
-## Register on Claude Code
-
-1. Copy `.claude/skills/codebase-explainer/` into your project at `.claude/skills/`.
+1. Copy `skills/codebase-explainer/` into your project at `.claude/skills/`.
 2. Open Claude Code inside the project.
 3. Type `/explain` to trigger the skill.
 
+Plugin manifest: `.claude-plugin/plugin.json`
+
 Plugin page: https://claude.com/plugins/Explainer
 
-## Installation
+## Future compatibility
 
-Copy `.claude/skills/codebase-explainer/` into `.claude/skills/` in your target repository.
+The skill is built for **Claude Code** first. The same structure can be adapted for other agents and editors such as Antigravity, Codex App, Codex CLI, Cursor, Factory Droid, Gemini CLI, GitHub Copilot CLI, Kimi Code, OpenCode, and Pi.
+
+## Examples
+
+See the `examples/` directory for sample outputs:
+
+- `examples/nextjs.md`
+- `examples/fastify.md`
+- `examples/laravel.md`
+- `examples/react.md`
+
+## Repository structure
+
+```
+claude-codebase-explainer/
+├── .claude-plugin/
+│   └── plugin.json
+├── skills/
+│   └── codebase-explainer/
+│       ├── SKILL.md
+│       └── examples.md
+├── examples/
+│   ├── nextjs.md
+│   ├── fastify.md
+│   ├── laravel.md
+│   └── react.md
+├── images/
+├── README.md
+└── LICENSE
+```
 
 ## License
 
